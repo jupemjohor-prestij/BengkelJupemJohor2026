@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amalan Terbaik Penghantaran Data Ukuran &amp; Naziran JTB</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #0B192C;
+      color: #F8FAFC;
+      user-select: none;
+    }
+
+    /* Full-Viewport Edge-to-Edge Stage (Zero Black Bars) */
+    .stage {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(20, 184, 166, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba(245, 158, 11, 0.10) 0%, transparent 42%),
+        linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+        linear-gradient(135deg, #0B192C 0%, #0F233D 50%, #091526 100%);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px, 100% 100%;
+      position: relative;
+    }
+
+    /* Outer Slide Container Centers the Scaled 1280x720 Reference Canvas */
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .slide.active {
+      display: flex !important;
+      z-index: 2;
+    }
+
+    /* Fixed 1280x720 Virtual Reference Layout Scaled Proportionally to Any Screen */
+    .slide-inner {
+      width: 1280px;
+      height: 720px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px 52px 62px 52px;
+      transform-origin: center center;
+      will-change: transform;
+      position: relative;
+    }
+
+    /* Elevated Slate-Navy Cards */
+    .card-elevated {
+      background-color: #132743;
+      border: 1px solid rgba(148, 163, 184, 0.26);
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.45);
+    }
+
+    .card-elevated-alt {
+      background-color: #1A3356;
+      border: 1px solid rgba(148, 163, 184, 0.30);
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.45);
+    }
+
+    .card-teal {
+      background: linear-gradient(155deg, rgba(20, 184, 166, 0.20) 0%, #132743 58%);
+      border: 1.5px solid rgba(20, 184, 166, 0.58);
+      box-shadow: 0 14px 32px -10px rgba(20, 184, 166, 0.24);
+    }
+
+    .card-muted {
+      background-color: rgba(19, 39, 67, 0.84);
+      border: 1px solid rgba(148, 163, 184, 0.26);
+    }
+
+    .card-gold {
+      background: linear-gradient(155deg, rgba(245, 158, 11, 0.18) 0%, #132743 60%);
+      border: 1.5px solid rgba(245, 158, 11, 0.56);
+    }
+
+    .card-red {
+      background: linear-gradient(155deg, rgba(239, 68, 68, 0.18) 0%, #132743 60%);
+      border: 1.5px solid rgba(239, 68, 68, 0.56);
+    }
+
+    /* Auto-dimming Floating Controls */
+    .floating-ui {
+      opacity: 0.94;
+      transition: opacity 0.35s ease, transform 0.25s ease;
+    }
+    .floating-ui.idle {
+      opacity: 0.35;
+    }
+    .floating-ui:hover,
+    .floating-ui:focus-within {
+      opacity: 1 !important;
+    }
+
+    /* Custom Scrollbar for Overview Modal */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B192C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+
+    /* Clean Landscape 16:9 Print / PDF Export */
+    @media print {
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+      html, body, .stage {
+        width: auto !important;
+        height: auto !important;
+        background: #0B192C !important;
+        overflow: visible !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .slide {
+        display: flex !important;
+        position: relative !important;
+        width: 13.333in !important;
+        height: 7.5in !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        margin: 0 !important;
+        background: #0B192C !important;
+      }
+      .slide-inner {
+        transform: none !important;
+        width: 1280px !important;
+        height: 720px !important;
+        padding: 32px 48px 34px 48px !important;
+      }
+      #top-controls,
+      #nav-controls,
+      #overview-modal {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="deck-stage" class="stage">
+
+    <!-- Top-Right Floating Controls -->
+    <div id="top-controls" class="floating-ui fixed top-3 right-3 z-50 flex items-center gap-2">
+      <!-- Live Text/Zoom Scale Override -->
+      <div class="flex items-center rounded-full bg-[#132743]/95 border border-slate-600/70 backdrop-blur-md p-0.5 shadow-lg">
+        <button id="btn-zoom-out" title="Kecilkan Skala Paparan" class="w-7 h-7 rounded-full hover:bg-slate-700 text-slate-200 text-xs font-extrabold flex items-center justify-center transition-colors cursor-pointer">
+          A-
+        </button>
+        <button id="btn-zoom-reset" title="Tetapkan Semula Skala (100%)" class="px-2 h-7 text-[11px] font-extrabold text-teal-300 hover:text-white transition-colors cursor-pointer">
+          100%
+        </button>
+        <button id="btn-zoom-in" title="Besarkan Skala Paparan" class="w-7 h-7 rounded-full hover:bg-slate-700 text-slate-200 text-xs font-extrabold flex items-center justify-center transition-colors cursor-pointer">
+          A+
+        </button>
+      </div>
+
+      <button id="btn-overview" title="Paparan Grid Semua Slaid" class="px-3.5 h-8 rounded-full bg-[#132743]/95 hover:bg-amber-500 hover:text-slate-950 text-slate-200 border border-slate-600/70 backdrop-blur-md text-xs font-bold flex items-center gap-1.5 shadow-lg transition-colors cursor-pointer">
+        <i class="fa-solid fa-grip"></i>
+        <span class="hidden sm:inline">Grid Slaid</span>
+      </button>
+      <button id="btn-print" title="Cetak / Simpan sebagai PDF (Landskap 16:9)" class="px-3.5 h-8 rounded-full bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-extrabold flex items-center gap-1.5 shadow-lg transition-colors cursor-pointer">
+        <i class="fa-solid fa-print"></i>
+        <span class="hidden sm:inline">PDF / Cetak</span>
+      </button>
+      <button id="btn-fullscreen" title="Skrin Penuh (Fullscreen)" class="w-8 h-8 rounded-full bg-[#132743]/95 hover:bg-teal-500 hover:text-slate-950 text-slate-200 border border-slate-600/70 backdrop-blur-md text-xs font-bold flex items-center justify-center shadow-lg transition-colors cursor-pointer">
+        <i id="icon-fullscreen" class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 1: TITLE SLIDE                                                -->
+    <!-- =================================================================== -->
+    <section class="slide active" data-title="1. Tajuk Pembentangan">
+      <div class="slide-inner">
+        <div class="flex items-center justify-between shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/45 text-amber-300 text-xs font-extrabold tracking-widest uppercase">
+            <i class="fa-solid fa-certificate text-amber-400"></i>
+            PEMATUHAN PKPUP 6/2009 &amp; PKPUP 1/2026
+          </div>
+          <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">
+            JUPEM • Bahagian Kadaster
+          </span>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 items-center flex-1 min-h-0 my-2">
+          <div class="col-span-8 flex flex-col justify-center">
+            <div class="w-24 h-1.5 bg-gradient-to-r from-teal-400 to-amber-400 rounded-full mb-5"></div>
+            <h1 class="text-[46px] font-black text-white leading-[1.12] tracking-tight mb-5">
+              AMALAN TERBAIK PENGHANTARAN DATA UKURAN &amp; FAIL 16 ASCII
+            </h1>
+            <p class="text-[20px] text-slate-300 max-w-3xl leading-relaxed mb-8 font-medium">
+              Garis Panduan Pematuhan Teknikal, Transisi eKadaster &amp; Naziran Fail Ukur JTB
+            </p>
+
+            <div class="flex items-center gap-5">
+              <div class="card-elevated rounded-xl px-5 py-3.5 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-lg bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 shrink-0">
+                  <i class="fa-solid fa-user-tie text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-teal-400">Pembentang</p>
+                  <p class="text-[15px] font-extrabold text-white">AIMAN SYAHMI BIN MOHD ATRASH</p>
+                </div>
+              </div>
+
+              <div class="card-elevated rounded-xl px-5 py-3.5 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-lg bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shrink-0">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Lokasi &amp; Tarikh</p>
+                  <p class="text-[15px] font-extrabold text-white">Hotel Granada • 25 November 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Total Station SVG Graphic -->
+          <div class="col-span-4 flex items-center justify-center h-full">
+            <div class="relative w-[340px] h-[360px] rounded-3xl card-elevated p-5 flex items-center justify-center">
+              <svg viewBox="0 0 320 340" class="w-full h-full drop-shadow-2xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="160" cy="145" r="118" stroke="#14B8A6" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="6 6" />
+                <circle cx="160" cy="145" r="84" stroke="#F59E0B" stroke-opacity="0.24" stroke-width="1" />
+                <line x1="25" y1="145" x2="295" y2="145" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
+                <line x1="160" y1="18" x2="160" y2="325" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
+                <line x1="218" y1="95" x2="305" y2="74" stroke="#14B8A6" stroke-width="2" stroke-dasharray="4 4" />
+                <circle cx="305" cy="74" r="4" fill="#14B8A6" />
+                <line x1="145" y1="188" x2="72" y2="318" stroke="#64748B" stroke-width="7" stroke-linecap="round" />
+                <line x1="145" y1="188" x2="72" y2="318" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+                <line x1="175" y1="188" x2="248" y2="318" stroke="#64748B" stroke-width="7" stroke-linecap="round" />
+                <line x1="175" y1="188" x2="248" y2="318" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+                <line x1="160" y1="190" x2="160" y2="324" stroke="#475569" stroke-width="6" stroke-linecap="round" />
+                <line x1="112" y1="248" x2="208" y2="248" stroke="#475569" stroke-width="3" />
+                <line x1="160" y1="190" x2="160" y2="285" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 3" />
+                <polygon points="160,296 155,284 165,284" fill="#F59E0B" />
+                <rect x="122" y="176" width="76" height="12" rx="4" fill="#1A3356" stroke="#64748B" stroke-width="1.5" />
+                <rect x="132" y="164" width="56" height="12" rx="3" fill="#0F766E" />
+                <circle cx="138" cy="170" r="3.5" fill="#F59E0B" />
+                <circle cx="160" cy="170" r="3.5" fill="#F59E0B" />
+                <circle cx="182" cy="170" r="3.5" fill="#F59E0B" />
+                <path d="M124 164 L124 72 C124 62 132 56 142 56 L178 56 C188 56 196 62 196 72 L196 164 Z" fill="#0B192C" stroke="#14B8A6" stroke-width="2.5" />
+                <path d="M136 56 L136 42 C136 37 140 34 145 34 L175 34 C180 34 184 37 184 42 L184 56" stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round" />
+                <rect x="137" y="118" width="46" height="36" rx="5" fill="#132743" stroke="#14B8A6" stroke-width="1.5" />
+                <rect x="142" y="123" width="36" height="14" rx="2" fill="#14B8A6" fill-opacity="0.25" />
+                <circle cx="147" cy="144" r="2" fill="#94A3B8" />
+                <circle cx="155" cy="144" r="2" fill="#94A3B8" />
+                <circle cx="163" cy="144" r="2" fill="#94A3B8" />
+                <circle cx="171" cy="144" r="2" fill="#F59E0B" />
+                <rect x="112" y="80" width="96" height="30" rx="8" fill="#1A3356" stroke="#F8FAFC" stroke-width="2" />
+                <rect x="204" y="76" width="14" height="38" rx="4" fill="#14B8A6" stroke="#5EEAD4" stroke-width="1.5" />
+                <ellipse cx="218" cy="95" rx="3" ry="14" fill="#38BDF8" />
+                <rect x="98" y="86" width="14" height="18" rx="3" fill="#334155" stroke="#94A3B8" stroke-width="1.5" />
+                <circle cx="160" cy="95" r="11" fill="#F59E0B" stroke="#FEF3C7" stroke-width="2" />
+                <circle cx="160" cy="95" r="4" fill="#0B192C" />
+                <rect x="148" y="314" width="24" height="18" rx="2" fill="#E2E8F0" stroke="#0B192C" stroke-width="1.5" />
+                <circle cx="160" cy="323" r="3" fill="#EF4444" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Bengkel Perkongsian Amalan Terbaik • eKadaster JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 1 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 2: PKPUP 1/2026: BARU VS LAMA (KEPERLUAN PENGHANTARAN)        -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="2. PKPUP 1/2026: Baru vs Lama">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-code-compare"></i>
+            PKPUP 1/2026 • PERBANDINGAN DASAR
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            PKPUP 1/2026: Baru vs Lama (Keperluan Penghantaran)
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-7 flex-1 min-h-0 my-4 items-stretch">
+          <!-- Left Card (Teal): BARU (PKPUP 1/2026) -->
+          <div class="card-teal rounded-2xl p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-teal-400/30 shrink-0">
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center text-lg shadow-lg shadow-teal-500/30 shrink-0">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded bg-teal-500/20 text-teal-300 text-[11px] font-extrabold uppercase tracking-wider mb-0.5">
+                    KAEDAH BAHARU
+                  </span>
+                  <h3 class="text-[20px] font-extrabold text-white">BARU (PKPUP 1/2026)</h3>
+                </div>
+              </div>
+              <span class="px-3.5 py-1 rounded-full bg-teal-500/20 border border-teal-400/45 text-teal-300 text-xs font-extrabold">
+                Surveyed
+              </span>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="rounded-xl bg-[#0B192C]/80 border border-teal-400/35 p-5 flex flex-col justify-center flex-1">
+                <p class="text-xs font-extrabold uppercase tracking-wider text-teal-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-file-export"></i> Penghantaran Dokumen
+                </p>
+                <p class="text-[18px] font-bold text-white leading-relaxed">
+                  JTB perlu menghantar <span class="text-teal-300">16 ASCII dan deraf pelan akui</span>.
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-[#0B192C]/80 border border-teal-400/35 p-5 flex flex-col justify-center flex-1">
+                <p class="text-xs font-extrabold uppercase tracking-wider text-teal-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-compass-drafting"></i> Asas Nilai Pelan Akui
+                </p>
+                <p class="text-[18px] font-bold text-white leading-relaxed mb-2">
+                  Pelan akui adalah berdasarkan nilai <span class="px-2.5 py-0.5 rounded bg-teal-500/25 border border-teal-400/50 text-teal-200 font-extrabold">Surveyed</span>.
+                </p>
+                <p class="text-[14px] text-teal-200/85 italic">
+                  Mengekalkan ketulenan ukuran lapangan sebenar pada pelan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card (Muted Slate): LAMA (TERDAHULU) -->
+          <div class="card-muted rounded-2xl p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-700 shrink-0">
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-slate-700/80 text-slate-300 flex items-center justify-center text-lg border border-slate-600 shrink-0">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded bg-slate-700/80 text-slate-300 text-[11px] font-bold uppercase tracking-wider mb-0.5">
+                    KAEDAH LEGASI
+                  </span>
+                  <h3 class="text-[20px] font-bold text-slate-200">LAMA (TERDAHULU)</h3>
+                </div>
+              </div>
+              <span class="px-3.5 py-1 rounded-full bg-slate-800 border border-slate-600 text-slate-400 text-xs font-semibold">
+                Adjusted
+              </span>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="rounded-xl bg-[#0B192C]/60 border border-slate-700/80 p-5 flex flex-col justify-center flex-1">
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-file-lines"></i> Penghantaran Dokumen
+                </p>
+                <p class="text-[18px] font-semibold text-slate-200 leading-relaxed">
+                  JTB perlu menghantar <span class="text-white font-bold">16 ASCII sahaja</span>.
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-[#0B192C]/60 border border-slate-700/80 p-5 flex flex-col justify-center flex-1">
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-sliders"></i> Asas Nilai Pelan Akui
+                </p>
+                <p class="text-[18px] font-semibold text-slate-200 leading-relaxed mb-2">
+                  Pelan akui adalah berdasarkan nilai <span class="px-2.5 py-0.5 rounded bg-slate-700/90 border border-slate-500/60 text-slate-200 font-bold">Adjusted</span>.
+                </p>
+                <p class="text-[14px] text-slate-400 italic">
+                  Nilai bearing dan jarak berubah selepas pelarasan rangkaian.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>PKPUP Bil. 1 Tahun 2026 • Keperluan Penghantaran Fail Ukur JTB</span>
+          <span class="font-bold text-teal-400">Slaid 2 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 3: PKPUP 1/2026: BARU VS LAMA (PROSES PELARASAN)              -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="3. PKPUP 1/2026: Proses Pelarasan">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-diagram-next"></i>
+            PKPUP 1/2026 • ALIRAN KERJA
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            PKPUP 1/2026: Baru vs Lama (Proses Pelarasan)
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-7 flex-1 min-h-0 my-3.5 items-stretch">
+          <!-- Left Card (Teal): PROSES BARU (1 FIX STATION) -->
+          <div class="card-teal rounded-2xl p-5 flex flex-col justify-between min-h-0">
+            <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-teal-400/30 shrink-0">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-teal-500 text-slate-950 flex items-center justify-center font-extrabold text-sm">
+                  <i class="fa-solid fa-bolt"></i>
+                </span>
+                <h3 class="text-[18px] font-extrabold text-white">PROSES BARU (1 FIX STATION)</h3>
+              </div>
+              <span class="px-3 py-0.5 rounded bg-teal-500/20 text-teal-300 text-xs font-bold">Nilai Surveyed</span>
+            </div>
+
+            <div class="flex flex-col justify-between gap-2 flex-1 min-h-0">
+              <div class="flex items-center gap-3 bg-[#0B192C]/80 border border-teal-500/30 rounded-xl px-4 py-2 flex-1">
+                <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">1</span>
+                <p class="text-[14.5px] text-slate-100 leading-snug">
+                  Kerja ukur tetap menggunakan syarat-syarat seperti <strong class="text-teal-300">PKPUP 6/2009 (3 good mark)</strong>.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3 bg-[#0B192C]/80 border border-teal-500/30 rounded-xl px-4 py-2 flex-1">
+                <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">2</span>
+                <p class="text-[14.5px] text-slate-100 leading-snug">
+                  JTB menghantar fail ukur ke JUPEM untuk semakan dan pelarasan.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3 bg-[#0B192C]/80 border border-teal-500/30 rounded-xl px-4 py-2 flex-1">
+                <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">3</span>
+                <p class="text-[14.5px] text-slate-100 leading-snug">
+                  Pelarasan dibuat terus menggunakan <strong class="text-amber-300">1 fix station</strong> (1 fix station tersebut adalah salah satu daripada 3 good mark).
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3 bg-[#0B192C]/80 border border-teal-500/30 rounded-xl px-4 py-2 flex-1">
+                <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">4</span>
+                <p class="text-[14.5px] text-slate-100 leading-snug">
+                  Pelarasan yang dibuat <strong class="text-teal-300">tidak menjejaskan nilai bearing dan jarak surveyed</strong>.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3 bg-teal-500/15 border border-teal-400/50 rounded-xl px-4 py-2 flex-1">
+                <span class="w-6 h-6 rounded-full bg-amber-400 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">5</span>
+                <p class="text-[14.5px] text-white font-semibold leading-snug">
+                  Pelan akui tetap memaparkan nilai bearing dan jarak <strong class="text-teal-300">surveyed</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card (Muted Slate): PROSES LAMA (3 FIX STATION) -->
+          <div class="card-muted rounded-2xl p-5 flex flex-col justify-between min-h-0">
+            <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-slate-700 shrink-0">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-slate-700 text-slate-200 flex items-center justify-center font-bold text-sm">
+                  <i class="fa-solid fa-layer-group"></i>
+                </span>
+                <h3 class="text-[18px] font-bold text-slate-200">PROSES LAMA (3 FIX STATION)</h3>
+              </div>
+              <span class="px-3 py-0.5 rounded bg-slate-800 text-slate-400 text-xs font-semibold">Nilai Adjusted</span>
+            </div>
+
+            <div class="flex flex-col justify-between gap-1.5 flex-1 min-h-0">
+              <div class="flex items-center gap-2.5 bg-[#0B192C]/60 border border-slate-700/75 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-400 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-300 leading-snug">
+                  Kerja ukur menggunakan syarat-syarat seperti PKPUP 6/2009 (3 good mark).
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2.5 bg-[#0B192C]/60 border border-slate-700/75 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-400 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-300 leading-snug">
+                  JTB menghantar fail ukur ke JUPEM untuk semakan dan pelarasan.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2.5 bg-[#0B192C]/60 border border-slate-700/75 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-400 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-300 leading-snug">
+                  Pelarasan dibuat terus menggunakan <strong class="text-slate-100">3 fix station</strong>.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2.5 bg-[#0B192C]/60 border border-slate-700/75 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-400 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-300 leading-snug">
+                  Sekiranya pelarasan tidak menepati ketepatan yang dikehendaki, pelarasan diulang menggunakan hanya <strong class="text-slate-100">1 fix station</strong> (1 fix station tersebut adalah 3 good mark).
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2.5 bg-[#0B192C]/60 border border-slate-700/75 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-400 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-300 leading-snug">
+                  Pelarasan menghasilkan nilai <strong class="text-slate-100">adjusted</strong>.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2.5 bg-slate-800/80 border border-slate-600/80 rounded-xl px-4 py-1.5 flex-1">
+                <span class="text-slate-300 font-bold text-base">•</span>
+                <p class="text-[14px] text-slate-200 font-medium leading-snug">
+                  Nilai adjusted digunakan untuk menghasilkan pelan akui.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Transisi Aliran Kerja Pelarasan eKadaster • JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 3 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 4: JADUAL 1 • PEKELILING KPUP BIL. 11/2021                    -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="4. Tempoh Menyiapkan Kerja JTB">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-calendar-check"></i>
+            JADUAL 1 • PEKELILING KPUP BIL. 11/2021
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Tempoh Menyiapkan Kerja JTB
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-3.5 flex flex-col justify-between gap-3.5">
+          <div class="card-elevated rounded-2xl overflow-hidden flex-1 flex flex-col min-h-0">
+            <table class="w-full h-full text-left border-collapse">
+              <thead>
+                <tr class="bg-gradient-to-r from-teal-700 to-teal-600 text-white">
+                  <th class="py-3 px-7 text-xs font-extrabold uppercase tracking-wider w-28">Bil.</th>
+                  <th class="py-3 px-7 text-xs font-extrabold uppercase tracking-wider">Jumlah Lot Setiap Fail</th>
+                  <th class="py-3 px-7 text-xs font-extrabold uppercase tracking-wider text-right">Tempoh Menyiapkan Kerja Ukur (Hari)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-700/70 text-[16px]">
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="px-7 text-slate-400 font-bold">1.</td>
+                  <td class="px-7 text-white font-semibold">1 – 10 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-teal-500/20 text-teal-300 font-extrabold text-[15px]">30 Hari</span></td>
+                </tr>
+                <tr class="bg-[#0B192C]/45 hover:bg-slate-800/40 transition-colors">
+                  <td class="px-7 text-slate-400 font-bold">2.</td>
+                  <td class="px-7 text-white font-semibold">11 – 30 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-teal-500/20 text-teal-300 font-extrabold text-[15px]">60 Hari</span></td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="px-7 text-slate-400 font-bold">3.</td>
+                  <td class="px-7 text-white font-semibold">31 – 50 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-teal-500/20 text-teal-300 font-extrabold text-[15px]">90 Hari</span></td>
+                </tr>
+                <tr class="bg-[#0B192C]/45 hover:bg-slate-800/40 transition-colors">
+                  <td class="px-7 text-slate-400 font-bold">4.</td>
+                  <td class="px-7 text-white font-semibold">51 – 100 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-teal-500/20 text-teal-300 font-extrabold text-[15px]">120 Hari</span></td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="px-7 text-slate-400 font-bold">5.</td>
+                  <td class="px-7 text-white font-semibold">101 – 500 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-teal-500/20 text-teal-300 font-extrabold text-[15px]">150 Hari</span></td>
+                </tr>
+                <tr class="bg-amber-500/12 hover:bg-amber-500/20 transition-colors">
+                  <td class="px-7 text-amber-300 font-extrabold">6.</td>
+                  <td class="px-7 text-white font-bold">&gt; 500 Lot</td>
+                  <td class="px-7 text-right"><span class="px-4 py-1 rounded-full bg-amber-500/25 border border-amber-400/45 text-amber-300 font-extrabold text-[15px]">180 Hari</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-gold rounded-xl px-6 py-3 flex items-center gap-3.5 text-[14.5px] text-amber-200 font-medium shrink-0">
+            <i class="fa-solid fa-circle-info text-amber-400 text-lg shrink-0"></i>
+            <span>* Peruntukan hari penghantaran data 16 ASCII dikira dari tarikh surat peruntukan nombor lot oleh PUPN.</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Pematuhan Tempoh Serahan Fail Ukur • PKPUP 11/2021</span>
+          <span class="font-bold text-teal-400">Slaid 4 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 5: PEMATUHAN JADUAL — KESAN KETIDAKPATUHAN TEMPOH             -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="5. Kesan Ketidakpatuhan Tempoh">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-hourglass-half"></i>
+            PEMATUHAN JADUAL
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Kesan Ketidakpatuhan Tempoh
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-6 flex items-stretch">
+          <div class="flex items-stretch gap-3.5 w-full">
+            <!-- Step 1 -->
+            <div class="flex-1 card-elevated rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-12 h-12 rounded-2xl bg-teal-500/20 border border-teal-400/45 text-teal-300 font-extrabold text-xl flex items-center justify-center">
+                    1
+                  </span>
+                  <span class="text-xs font-extrabold text-teal-400 uppercase tracking-wider">Tahap 1</span>
+                </div>
+                <h3 class="text-[21px] font-extrabold text-white mb-2.5">Peringatan 1</h3>
+                <p class="text-[16px] text-slate-300 leading-relaxed">
+                  Notis peringatan awal tamat tempoh.
+                </p>
+              </div>
+              <div class="mt-4 pt-3.5 border-t border-slate-700/70 text-xs font-bold text-teal-300">
+                Tamat Tempoh Asal
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center text-teal-400 text-xl px-0.5">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex-1 card-gold rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/45 text-amber-300 font-extrabold text-xl flex items-center justify-center">
+                    2
+                  </span>
+                  <span class="text-xs font-extrabold text-amber-400 uppercase tracking-wider">+14 Hari</span>
+                </div>
+                <h3 class="text-[21px] font-extrabold text-white mb-2.5">Peringatan 2</h3>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  Susulan dikeluarkan selepas 14 hari.
+                </p>
+              </div>
+              <div class="mt-4 pt-3.5 border-t border-amber-500/25 text-xs font-bold text-amber-300">
+                Susulan Pertama
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center text-amber-400 text-xl px-0.5">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex-1 rounded-2xl p-6 flex flex-col justify-between bg-gradient-to-b from-orange-500/18 to-[#132743] border-[1.5px] border-orange-400/50">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-12 h-12 rounded-2xl bg-orange-500/25 border border-orange-400/50 text-orange-300 font-extrabold text-xl flex items-center justify-center">
+                    3
+                  </span>
+                  <span class="text-xs font-extrabold text-orange-400 uppercase tracking-wider">+14 Hari</span>
+                </div>
+                <h3 class="text-[21px] font-extrabold text-white mb-2.5">Peringatan 3</h3>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  Peringatan akhir selepas 14 hari.
+                </p>
+              </div>
+              <div class="mt-4 pt-3.5 border-t border-orange-500/25 text-xs font-bold text-orange-300">
+                Amaran Terakhir
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center text-red-400 text-xl px-0.5">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <!-- Step 4: Notis 29D -->
+            <div class="flex-1 card-red rounded-2xl p-6 flex flex-col justify-between shadow-lg shadow-red-950/50">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <span class="w-12 h-12 rounded-2xl bg-red-500 text-white font-black text-2xl flex items-center justify-center shadow-md shadow-red-500/40">
+                    !
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded bg-red-500/25 border border-red-400/50 text-red-300 text-[11px] font-extrabold uppercase">
+                    Tindakan
+                  </span>
+                </div>
+                <h3 class="text-[21px] font-extrabold text-red-300 mb-2.5">Notis 29D</h3>
+                <p class="text-[16px] text-slate-100 leading-relaxed">
+                  Amaran akhir penguatkuasaan.
+                </p>
+              </div>
+              <div class="mt-4 pt-3.5 border-t border-red-500/30 text-xs font-extrabold text-red-300">
+                KTN Seksyen 424(2)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Carta Alir Eskalasi Kelewatan Serahan Data 16 ASCII</span>
+          <span class="font-bold text-teal-400">Slaid 5 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 6: PKPUP 11/2021 & KTN S.424(2) — TINDAKAN JTB & NOTIS 29D    -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="6. Tindakan JTB & Implikasi Notis 29D">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-scale-balanced"></i>
+            PKPUP 11/2021 &amp; KTN (S.424(2))
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Tindakan JTB &amp; Implikasi Notis 29D
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 flex-1 min-h-0 my-5 items-stretch">
+          <!-- Left Card (Teal): TINDAKAN SEGERA JTB -->
+          <div class="card-teal rounded-2xl p-7 flex flex-col justify-between min-h-0">
+            <div class="flex items-center gap-4 pb-4 mb-4 border-b border-teal-400/30 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-teal-400">Langkah Pencegahan</p>
+                <h3 class="text-[21px] font-extrabold text-white">TINDAKAN SEGERA JTB</h3>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="bg-[#0B192C]/80 border border-teal-400/30 rounded-xl p-5 flex flex-col justify-center flex-1">
+                <h4 class="text-[17px] font-extrabold text-teal-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-bolt"></i> Penyelesaian Segera
+                </h4>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  Pihak JTB perlu berusaha untuk menyelesaikan fail ukur dengan segera.
+                </p>
+              </div>
+
+              <div class="bg-[#0B192C]/80 border border-teal-400/30 rounded-xl p-5 flex flex-col justify-center flex-1">
+                <h4 class="text-[17px] font-extrabold text-teal-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-envelope-open-text"></i> Permohonan Lanjutan
+                </h4>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  Sekiranya tetap tidak boleh menyelesaikan fail ukur, buat surat permohonan masa kepada JUPEM untuk pelanjutan masa sebelum tamat tempoh.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card (Red): TETAP TIDAK SELESAI -->
+          <div class="card-red rounded-2xl p-7 flex flex-col justify-between min-h-0">
+            <div class="flex items-center gap-4 pb-4 mb-4 border-b border-red-400/30 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-red-500 text-white flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-red-400">Implikasi Undang-Undang</p>
+                <h3 class="text-[21px] font-extrabold text-white">TETAP TIDAK SELESAI</h3>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="bg-[#0B192C]/80 border border-red-400/30 rounded-xl p-5 flex flex-col justify-center flex-1">
+                <h4 class="text-[17px] font-extrabold text-red-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-building-flag"></i> Ambil Alih Kerja
+                </h4>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  PUPN dibenarkan mengambil alih kerja ukur yang tidak diselesaikan oleh JTB dalam tempoh yang ditetapkan.
+                </p>
+              </div>
+
+              <div class="bg-[#0B192C]/80 border border-red-400/30 rounded-xl p-5 flex flex-col justify-center flex-1">
+                <h4 class="text-[17px] font-extrabold text-red-300 mb-2 flex items-center gap-2">
+                  <i class="fa-solid fa-file-invoice-dollar"></i> Tuntutan Kos Sivil
+                </h4>
+                <p class="text-[16px] text-slate-200 leading-relaxed">
+                  Segala kos pengambilalihan ditanggung oleh JTB melalui tindakan sivil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Penguatkuasaan Seksyen 424(2) Kanun Tanah Negara</span>
+          <span class="font-bold text-teal-400">Slaid 6 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 7: PRESTASI PENYELESAIAN SEMASA — STATISTIK NOTIS 29D         -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="7. Statistik Pengeluaran Notis 29D">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-chart-pie"></i>
+            PRESTASI PENYELESAIAN SEMASA
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Statistik Pengeluaran Notis 29D
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-4 flex flex-col justify-between gap-5">
+          <div class="grid grid-cols-3 gap-7 flex-1 min-h-0">
+            <!-- KPI 1: Dikeluarkan (Gold) -->
+            <div class="card-gold rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-400/45 text-amber-300 flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-folder-plus"></i>
+              </div>
+              <p class="text-xs font-extrabold uppercase tracking-widest text-amber-300 mb-2">Dikeluarkan</p>
+              <p class="text-[46px] font-black text-white tracking-tight leading-none">240 FAIL</p>
+              <p class="text-[22px] font-extrabold text-amber-300 mt-3.5">1,389 LOT</p>
+            </div>
+
+            <!-- KPI 2: Selesai (Teal) -->
+            <div class="card-teal rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <div class="w-14 h-14 rounded-2xl bg-teal-500/20 border border-teal-400/45 text-teal-300 flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <p class="text-xs font-extrabold uppercase tracking-widest text-teal-300 mb-2">Selesai</p>
+              <p class="text-[46px] font-black text-teal-300 tracking-tight leading-none">202 FAIL</p>
+              <p class="text-[22px] font-extrabold text-white mt-3.5">1,161 LOT <span class="text-teal-300">(84%)</span></p>
+            </div>
+
+            <!-- KPI 3: Belum Selesai (Red) -->
+            <div class="card-red rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <div class="w-14 h-14 rounded-2xl bg-red-500/20 border border-red-400/45 text-red-400 flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <p class="text-xs font-extrabold uppercase tracking-widest text-red-300 mb-2">Belum Selesai</p>
+              <p class="text-[46px] font-black text-red-400 tracking-tight leading-none">28 FAIL</p>
+              <p class="text-[22px] font-extrabold text-white mt-3.5">186 LOT <span class="text-red-300">(16%)</span></p>
+            </div>
+          </div>
+
+          <div class="card-elevated rounded-2xl p-5 shrink-0">
+            <div class="flex items-center justify-between text-sm font-extrabold mb-3">
+              <span class="text-teal-300"><i class="fa-solid fa-square mr-2"></i>Kadar Penyelesaian Fail: 84% (202 Fail)</span>
+              <span class="text-red-400"><i class="fa-solid fa-square mr-2"></i>Baki Tindakan: 16% (28 Fail)</span>
+            </div>
+            <div class="w-full h-4 rounded-full bg-[#0B192C] overflow-hidden flex p-0.5 border border-slate-700">
+              <div class="h-full bg-gradient-to-r from-teal-500 to-emerald-400 rounded-l-full" style="width: 84%"></div>
+              <div class="h-full bg-red-500 rounded-r-full ml-1" style="width: 16%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Rekod Pemantauan Notis 29D • JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 7 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 8: AMALAN TERBAIK 1 • PKPUP 6/2009 — SEMAKAN PO & ANJAKAN     -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="8. Amalan Terbaik 1: Semakan PO">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-award"></i>
+            AMALAN TERBAIK 1 • PKPUP 6/2009
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Semakan PO &amp; Had Anjakan Vektor
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-3.5 flex flex-col justify-between gap-3.5">
+          <!-- Top Gold Banner -->
+          <div class="card-gold rounded-xl px-6 py-3 flex items-center gap-4 border-l-4 border-l-amber-400 shrink-0">
+            <div class="w-9 h-9 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center text-base shrink-0 font-bold">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <p class="text-[15px] font-extrabold text-amber-200 tracking-wide">
+              PERLU DIBUAT UNTUK SEMUA GARISAN SEMPADAN, BUKAN UNTUK DATUM MULA KERJA SAHAJA.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-7 flex-1 items-stretch min-h-0">
+            <!-- Left Card: PKPUP 6/2009 & PKPUP 3/2003 Reference -->
+            <div class="card-teal rounded-2xl p-5 flex flex-col justify-between min-h-0">
+              <h3 class="text-[17px] font-extrabold text-teal-300 pb-2.5 mb-3 border-b border-teal-400/30 flex items-center gap-2 shrink-0">
+                <i class="fa-solid fa-arrows-left-right-to-line"></i> Had Anjakan &amp; Perselisihan Sempadan (PKPUP 6/2009)
+              </h3>
+
+              <div class="grid grid-cols-2 gap-3.5 mb-3 shrink-0">
+                <div class="bg-[#0B192C]/80 border border-teal-400/30 rounded-xl p-3.5">
+                  <p class="text-xs font-bold text-slate-300">Bandar / Pekan / Membangun</p>
+                  <p class="text-[22px] font-black text-teal-300 mt-1">&lt; 0.050 meter</p>
+                </div>
+                <div class="bg-[#0B192C]/80 border border-teal-400/30 rounded-xl p-3.5">
+                  <p class="text-xs font-bold text-slate-300">Pedalaman / Luar Bandar</p>
+                  <p class="text-[22px] font-black text-teal-300 mt-1">&lt; 0.100 meter</p>
+                </div>
+              </div>
+
+              <div class="bg-[#0B192C]/70 border border-slate-700/80 rounded-xl p-4 flex-1 flex flex-col justify-center">
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-xs font-extrabold uppercase tracking-wider text-amber-300">Had Perbezaan PKPUP 3/2003 (Rujukan)</p>
+                  <span class="px-2.5 py-0.5 rounded bg-red-500/20 text-red-300 text-[11px] font-bold uppercase">Telah Dibatalkan</span>
+                </div>
+                <ul class="space-y-2 text-[14px] text-slate-200 leading-snug">
+                  <li>• <strong class="text-white">Garisan ≤ 40 m:</strong> Bearing &gt; <strong class="text-amber-300">01'</strong> dan jarak &gt; <strong class="text-amber-300">0.015 meter</strong>.</li>
+                  <li>• <strong class="text-white">Garisan &gt; 40 m:</strong> Bearing &gt; <strong class="text-amber-300">30"</strong> dan jarak &gt; <strong class="text-amber-300">0.006 m / 20 m</strong> (maks <strong class="text-amber-300">0.050 m</strong>).</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Card: Kawalan Di JUPEM Johor -->
+            <div class="card-elevated-alt rounded-2xl p-5 flex flex-col justify-between min-h-0">
+              <h3 class="text-[17px] font-extrabold text-amber-300 pb-2.5 mb-3 border-b border-slate-600/70 flex items-center gap-2 shrink-0">
+                <i class="fa-solid fa-building-shield"></i> Kawalan Di JUPEM Johor
+              </h3>
+
+              <div class="flex flex-col justify-evenly gap-3.5 flex-1 min-h-0">
+                <div class="bg-[#0B192C]/75 border border-teal-500/25 rounded-xl p-4 flex flex-col justify-center flex-1">
+                  <p class="text-xs font-extrabold uppercase tracking-wider text-teal-400 mb-2">Toleransi Bearing</p>
+                  <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                    <span class="text-[15px] font-semibold text-slate-200">Ukuran Kelas Pertama</span>
+                    <span class="text-[18px] font-extrabold text-teal-300">&lt; 1' 15"</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-1.5">
+                    <span class="text-[15px] font-semibold text-slate-200">Ukuran Kelas Kedua</span>
+                    <span class="text-[18px] font-extrabold text-teal-300">&lt; 2' 30"</span>
+                  </div>
+                </div>
+
+                <div class="bg-[#0B192C]/75 border border-amber-500/25 rounded-xl p-4 flex flex-col justify-center flex-1">
+                  <p class="text-xs font-extrabold uppercase tracking-wider text-amber-400 mb-2">Toleransi Jarak</p>
+                  <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                    <span class="text-[15px] font-semibold text-slate-200">Bandar / Pekan / Membangun</span>
+                    <span class="text-[18px] font-extrabold text-amber-300">&lt; 0.050 m</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-1.5">
+                    <span class="text-[15px] font-semibold text-slate-200">Pedalaman / Luar Bandar</span>
+                    <span class="text-[18px] font-extrabold text-amber-300">&lt; 0.100 m</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Semakan Perbezaan Ukuran dengan Pelan Akui (PO)</span>
+          <span class="font-bold text-teal-400">Slaid 8 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 9: PIAWAIAN KETEPATAN UKURAN — HAD TOLERANSI BEARING & JARAK  -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="9. Had Toleransi Bearing & Jarak">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-bullseye"></i>
+            PIAWAIAN KETEPATAN UKURAN
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Had Toleransi Bearing &amp; Jarak
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-8 flex-1 min-h-0 my-5 items-stretch">
+          <!-- Left Card: TOLERANSI BEARING -->
+          <div class="card-teal rounded-2xl p-7 flex flex-col justify-between min-h-0">
+            <div class="flex items-center gap-4 pb-4 mb-4 border-b border-teal-400/30 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center text-2xl shrink-0">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-teal-300">Kawalan Sudut / Arah</p>
+                <h3 class="text-[21px] font-extrabold text-white">TOLERANSI BEARING</h3>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="bg-[#0B192C]/80 border border-teal-400/35 rounded-xl p-6 flex items-center justify-between flex-1">
+                <div>
+                  <p class="text-[18px] font-extrabold text-white">Ukuran Kelas Pertama</p>
+                  <p class="text-sm text-slate-400 mt-1">Kawasan bandar / perindustrian / utama</p>
+                </div>
+                <span class="text-[32px] font-black text-teal-300 shrink-0 ml-4">&lt; 1' 15"</span>
+              </div>
+
+              <div class="bg-[#0B192C]/80 border border-teal-400/35 rounded-xl p-6 flex items-center justify-between flex-1">
+                <div>
+                  <p class="text-[18px] font-extrabold text-white">Ukuran Kelas Kedua</p>
+                  <p class="text-sm text-slate-400 mt-1">Kawasan luar bandar / pertanian</p>
+                </div>
+                <span class="text-[32px] font-black text-teal-300 shrink-0 ml-4">&lt; 2' 30"</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card: TOLERANSI JARAK -->
+          <div class="card-gold rounded-2xl p-7 flex flex-col justify-between min-h-0">
+            <div class="flex items-center gap-4 pb-4 mb-4 border-b border-amber-400/30 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl shrink-0">
+                <i class="fa-solid fa-ruler-horizontal"></i>
+              </div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-amber-300">Kawalan Panjang Garisan</p>
+                <h3 class="text-[21px] font-extrabold text-white">TOLERANSI JARAK</h3>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-evenly gap-4 flex-1 min-h-0">
+              <div class="bg-[#0B192C]/80 border border-amber-400/35 rounded-xl p-6 flex items-center justify-between flex-1">
+                <div>
+                  <p class="text-[18px] font-extrabold text-white">Bandar / Pekan / Membangun</p>
+                  <p class="text-sm text-slate-400 mt-1">Perbezaan jarak maksimum dibenarkan</p>
+                </div>
+                <span class="text-[32px] font-black text-amber-300 shrink-0 ml-4">&lt; 0.050 m</span>
+              </div>
+
+              <div class="bg-[#0B192C]/80 border border-amber-400/35 rounded-xl p-6 flex items-center justify-between flex-1">
+                <div>
+                  <p class="text-[18px] font-extrabold text-white">Pedalaman / Luar Bandar</p>
+                  <p class="text-sm text-slate-400 mt-1">Perbezaan jarak maksimum dibenarkan</p>
+                </div>
+                <span class="text-[32px] font-black text-amber-300 shrink-0 ml-4">&lt; 0.100 m</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Piawaian Kawalan Kualiti Semakan Data Ukur • JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 9 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 10: AMALAN TERBAIK 2 — HAD TOLERANSI PERBEZAAN LUAS           -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="10. Amalan Terbaik 2: Perbezaan Luas">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-vector-square"></i>
+            AMALAN TERBAIK 2
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Had Toleransi Perbezaan Luas
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-4 flex flex-col justify-between gap-5">
+          <div class="grid grid-cols-3 gap-7 flex-1 min-h-0">
+            <div class="card-teal rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <span class="inline-block mx-auto px-3.5 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-extrabold uppercase tracking-wider mb-4">
+                Kategori 1
+              </span>
+              <p class="text-[18px] font-bold text-slate-200 mb-2">Bawah 40 Hektar</p>
+              <p class="text-[56px] font-black text-teal-300 leading-none my-2">5%</p>
+              <p class="text-xs text-slate-400 uppercase tracking-wider mt-4">Had Toleransi Maksimum</p>
+            </div>
+
+            <div class="card-gold rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <span class="inline-block mx-auto px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-extrabold uppercase tracking-wider mb-4">
+                Kategori 2
+              </span>
+              <p class="text-[18px] font-bold text-slate-200 mb-2">40 – 200 Hektar</p>
+              <p class="text-[50px] font-black text-amber-300 leading-none my-2">2 Hektar</p>
+              <p class="text-xs text-slate-400 uppercase tracking-wider mt-4">Had Toleransi Maksimum</p>
+            </div>
+
+            <div class="card-teal rounded-2xl p-7 text-center flex flex-col justify-center items-center">
+              <span class="inline-block mx-auto px-3.5 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-extrabold uppercase tracking-wider mb-4">
+                Kategori 3
+              </span>
+              <p class="text-[18px] font-bold text-slate-200 mb-2">Melebihi 200 Hektar</p>
+              <p class="text-[56px] font-black text-teal-300 leading-none my-2">1%</p>
+              <p class="text-xs text-slate-400 uppercase tracking-wider mt-4">Had Toleransi Maksimum</p>
+            </div>
+          </div>
+
+          <div class="card-gold rounded-2xl p-5 flex items-center gap-4 border-l-4 border-l-amber-400 shrink-0">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-400/45 text-amber-300 flex items-center justify-center text-2xl shrink-0">
+              <i class="fa-solid fa-file-shield"></i>
+            </div>
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-wider text-amber-300 mb-1">NOTA PEMATUHAN</p>
+              <p class="text-[15px] text-slate-100 leading-relaxed">
+                Sebarang ukuran tidak mengikut pelan pra-hitungan atau perbezaan keluasan melebihi had mesti mendapat <strong class="text-amber-300">surat persetujuan pemilik tanah</strong> serta <strong class="text-amber-300">kelulusan Pejabat Tanah (diminitkan)</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Kawalan Perbezaan Keluasan Lot Ukur • Peraturan Ukur Kadaster</span>
+          <span class="font-bold text-teal-400">Slaid 10 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 11: AMALAN TERBAIK 3 — KEPENTINGAN GARISAN SAMBUNGAN          -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="11. Amalan Terbaik 3: Garisan Sambungan">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-link"></i>
+            AMALAN TERBAIK 3
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Kepentingan Garisan Sambungan
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-12 gap-7 flex-1 min-h-0 my-4 items-stretch">
+          <!-- Left 5 Cols: Strategi Integrasi eKadaster -->
+          <div class="col-span-5 card-teal rounded-2xl p-6 flex flex-col justify-between min-h-0">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="w-11 h-11 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center text-lg shrink-0">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <h3 class="text-[20px] font-extrabold text-white">Strategi Integrasi eKadaster</h3>
+              </div>
+
+              <div class="space-y-4">
+                <div class="bg-[#0B192C]/80 border border-teal-400/35 rounded-xl p-4">
+                  <p class="text-xs font-extrabold text-teal-300 uppercase tracking-wider mb-1.5">1. Cerapan Tambahan</p>
+                  <p class="text-[15.5px] text-slate-200 leading-relaxed">
+                    Wajib dilaksanakan dari <strong class="text-white">BKL bersebelahan</strong>.
+                  </p>
+                </div>
+
+                <div class="bg-[#0B192C]/80 border border-teal-400/35 rounded-xl p-4">
+                  <p class="text-xs font-extrabold text-teal-300 uppercase tracking-wider mb-1.5">2. Pengesahan Pantas</p>
+                  <p class="text-[15.5px] text-slate-200 leading-relaxed">
+                    Connection line yang betul memudahkan JUPEM memproses pengesahan jarak dan bearing antara lot dalam pangkalan data eKadaster.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-teal-400/25 text-xs text-teal-200/90 font-semibold">
+              <i class="fa-solid fa-circle-check text-teal-400 mr-1.5"></i> Mengikat geometri lot baharu terus ke rangkaian NDCDB.
+            </div>
+          </div>
+
+          <!-- Right 7 Cols: Clean SVG Diagram -->
+          <div class="col-span-7 card-elevated rounded-2xl p-5 flex flex-col justify-between min-h-0">
+            <div class="flex items-center justify-between mb-2.5 shrink-0">
+              <span class="inline-flex items-center gap-2 text-amber-300 font-extrabold text-sm">
+                <i class="fa-solid fa-circle-check text-teal-400"></i>
+                Penyelesaian Tepat (Garisan Sambungan)
+              </span>
+              <span class="px-3 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold">
+                Ikatan NDCDB
+              </span>
+            </div>
+
+            <div class="flex-1 min-h-0 flex items-center justify-center">
+              <svg viewBox="0 0 600 280" class="w-full h-full rounded-xl bg-[#0B192C] border border-slate-700/80" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#1E293B" stroke-width="1">
+                  <line x1="0" y1="56" x2="600" y2="56" />
+                  <line x1="0" y1="112" x2="600" y2="112" />
+                  <line x1="0" y1="168" x2="600" y2="168" />
+                  <line x1="0" y1="224" x2="600" y2="224" />
+                  <line x1="120" y1="0" x2="120" y2="280" />
+                  <line x1="240" y1="0" x2="240" y2="280" />
+                  <line x1="360" y1="0" x2="360" y2="280" />
+                  <line x1="480" y1="0" x2="480" y2="280" />
+                </g>
+
+                <!-- Lot Lama (BKL) -->
+                <polygon points="55,48 225,38 240,162 70,172" fill="rgba(20, 184, 166, 0.16)" stroke="#14B8A6" stroke-width="2.5" />
+                <text x="148" y="96" text-anchor="middle" fill="#5EEAD4" font-size="16" font-weight="800">LOT LAMA</text>
+                <text x="148" y="117" text-anchor="middle" fill="#99F6E4" font-size="12" font-weight="600">(BKL Bersebelahan)</text>
+
+                <circle cx="55" cy="48" r="5" fill="#14B8A6" />
+                <circle cx="225" cy="38" r="6.5" fill="#14B8A6" stroke="#0B192C" stroke-width="2" />
+                <circle cx="240" cy="162" r="5" fill="#14B8A6" />
+                <circle cx="70" cy="172" r="5" fill="#14B8A6" />
+                <text x="215" y="25" text-anchor="middle" fill="#5EEAD4" font-size="12" font-weight="800">BKL</text>
+
+                <!-- Lot Baru -->
+                <polygon points="365,108 535,98 550,222 380,232" fill="rgba(245, 158, 11, 0.14)" stroke="#F8FAFC" stroke-width="2.5" />
+                <text x="458" y="158" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="800">LOT BARU</text>
+                <text x="458" y="179" text-anchor="middle" fill="#CBD5E1" font-size="12" font-weight="600">(Ukuran Semasa)</text>
+
+                <circle cx="365" cy="108" r="6.5" fill="#F59E0B" stroke="#0B192C" stroke-width="2" />
+                <circle cx="535" cy="98" r="5" fill="#F8FAFC" />
+                <circle cx="550" cy="222" r="5" fill="#F8FAFC" />
+                <circle cx="380" cy="232" r="5" fill="#F8FAFC" />
+                <text x="372" y="93" text-anchor="middle" fill="#FCD34D" font-size="12" font-weight="800">BKB</text>
+
+                <!-- Solid Gold Connection Line -->
+                <line x1="225" y1="38" x2="365" y2="108" stroke="#F59E0B" stroke-width="4" />
+
+                <rect x="230" y="24" width="166" height="36" rx="7" fill="#132743" stroke="#F59E0B" stroke-width="1.5" />
+                <text x="313" y="40" text-anchor="middle" fill="#FCD34D" font-size="11" font-weight="800">GARISAN SAMBUNGAN</text>
+                <text x="313" y="53" text-anchor="middle" fill="#E2E8F0" font-size="10" font-weight="600">Bearing &amp; Jarak Terikat</text>
+
+                <rect x="35" y="246" width="530" height="24" rx="6" fill="rgba(239, 68, 68, 0.14)" stroke="rgba(239, 68, 68, 0.45)" stroke-width="1" />
+                <text x="300" y="262" text-anchor="middle" fill="#FCA5A5" font-size="11" font-weight="700">
+                  Tanpa Garisan Sambungan: Lot Lama &amp; Lot Baru terpisah tanpa ikatan topologi dalam eKadaster
+                </text>
+              </svg>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-slate-400 mt-2.5 shrink-0">
+              <span><strong class="text-teal-300">BKL:</strong> Batu Konkrit Lama</span>
+              <span><strong class="text-amber-300">BKB:</strong> Batu Konkrit Baharu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Integriti Topologi Pangkalan Data Ukur Kadaster (PDUK)</span>
+          <span class="font-bold text-teal-400">Slaid 11 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 12: ALIRAN PEMPROSESAN & NAZIRAN FAIL UKUR                    -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="12. Aliran Pemprosesan & Naziran Fail Ukur">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1.5">
+            <i class="fa-solid fa-sitemap"></i>
+            ALIRAN KERJA JUPEM
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Aliran Pemprosesan &amp; Naziran Fail Ukur
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-3 flex flex-col items-center justify-center max-w-5xl w-full mx-auto">
+          <!-- Top Root Node -->
+          <div class="card-elevated-alt border-2 border-teal-400/65 rounded-2xl px-10 py-4 text-center shadow-xl shadow-teal-950/50 relative z-10 w-[400px]">
+            <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-teal-500/20 text-teal-300 text-[11px] font-extrabold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-cloud-arrow-up"></i> Penyerahan Data
+            </div>
+            <p class="text-[21px] font-extrabold text-white tracking-tight">
+              JTB menghantar 16 ASCII
+            </p>
+          </div>
+
+          <!-- Orthogonal Connector Lines & Branch Labels -->
+          <div class="w-[760px] relative flex flex-col items-center shrink-0">
+            <div class="w-0.5 h-8 bg-gradient-to-b from-teal-400 to-slate-400"></div>
+
+            <div class="w-full grid grid-cols-2 relative">
+              <div class="absolute top-0 left-1/4 right-1/4 h-0.5 bg-slate-400"></div>
+
+              <!-- Left Branch: Semua fail -->
+              <div class="flex flex-col items-center relative">
+                <div class="w-0.5 h-10 bg-teal-400"></div>
+                <div class="absolute top-1.5 px-3.5 py-0.5 rounded-full bg-[#0B192C] border border-teal-400/60 text-teal-300 font-extrabold text-sm shadow-md">
+                  Semua fail
+                </div>
+                <i class="fa-solid fa-caret-down text-teal-400 -mt-1.5 text-base"></i>
+              </div>
+
+              <!-- Right Branch: Terpilih -->
+              <div class="flex flex-col items-center relative">
+                <div class="w-0.5 h-10 bg-amber-400"></div>
+                <div class="absolute top-1.5 px-3.5 py-0.5 rounded-full bg-[#0B192C] border border-amber-400/60 text-amber-300 font-extrabold text-sm shadow-md">
+                  Terpilih
+                </div>
+                <i class="fa-solid fa-caret-down text-amber-400 -mt-1.5 text-base"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Two Destination Cards -->
+          <div class="grid grid-cols-2 gap-10 w-[860px] mt-1">
+            <!-- Left Card: JUPEM NEGERI -->
+            <div class="card-teal rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3.5 pb-3 mb-4 border-b border-teal-400/30">
+                  <div class="w-11 h-11 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center text-lg shrink-0 shadow-md shadow-teal-500/25">
+                    <i class="fa-solid fa-building"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-teal-300 block">Pemprosesan Fail Ukur</span>
+                    <h3 class="text-[20px] font-extrabold text-white">JUPEM NEGERI</h3>
+                  </div>
+                </div>
+
+                <ul class="space-y-2.5 text-[16px] text-slate-100 font-semibold">
+                  <li class="flex items-center gap-3 bg-[#0B192C]/75 border border-teal-500/25 rounded-xl px-4 py-2.5">
+                    <span class="text-teal-400 font-black">-</span>
+                    <span>Semakan data</span>
+                  </li>
+                  <li class="flex items-center gap-3 bg-[#0B192C]/75 border border-teal-500/25 rounded-xl px-4 py-2.5">
+                    <span class="text-teal-400 font-black">-</span>
+                    <span>Pelarasan data</span>
+                  </li>
+                  <li class="flex items-center gap-3 bg-[#0B192C]/75 border border-teal-500/25 rounded-xl px-4 py-2.5">
+                    <span class="text-teal-400 font-black">-</span>
+                    <span>Penyediaan PA dan B1</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Card: JUPEM IBU PEJABAT -->
+            <div class="card-gold rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3.5 pb-3 mb-4 border-b border-amber-400/30">
+                  <div class="w-11 h-11 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center text-lg shrink-0 shadow-md shadow-amber-500/25">
+                    <i class="fa-solid fa-building-shield"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 block">Naziran Fail JTB</span>
+                    <h3 class="text-[20px] font-extrabold text-white">JUPEM IBU PEJABAT</h3>
+                  </div>
+                </div>
+
+                <ul class="space-y-2.5 text-[16px] text-slate-100 font-semibold">
+                  <li class="flex items-center gap-3 bg-[#0B192C]/75 border border-amber-500/25 rounded-xl px-4 py-2.5">
+                    <span class="text-amber-400 font-black">-</span>
+                    <span>Naziran fail JTB</span>
+                  </li>
+                  <li class="flex items-center gap-3 bg-[#0B192C]/75 border border-amber-500/25 rounded-xl px-4 py-2.5">
+                    <span class="text-amber-400 font-black">-</span>
+                    <span>Semakan di lapangan</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Aliran Pemprosesan Data eKadaster &amp; Pemilihan Naziran • JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 12 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 13: SKOP TADBIR URUS & SENARAI SEMAK TEKNIKAL (a - j)         -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="13. Skop Tadbir Urus & Senarai Semak Teknikal">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/15 border border-teal-400/40 text-teal-300 text-xs font-extrabold tracking-wider uppercase mb-1">
+            <i class="fa-solid fa-clipboard-check"></i>
+            NAZIRAN FAIL UKUR JTB • PKPUP 2/2002
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Skop Tadbir Urus &amp; Senarai Semak Teknikal
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-3 flex flex-col justify-between gap-3">
+          <!-- Top Row: 3 Governance Cards -->
+          <div class="grid grid-cols-3 gap-4 shrink-0">
+            <div class="card-elevated rounded-xl p-3.5 flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-teal-500/20 border border-teal-400/45 text-teal-300 flex items-center justify-center text-base shrink-0">
+                <i class="fa-solid fa-building-shield"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-teal-400">Pelaksana Naziran</p>
+                <p class="text-[13.5px] font-bold text-white leading-snug">
+                  Seksyen Naziran, Bahagian Kadaster, Ibu Pejabat JUPEM
+                </p>
+              </div>
+            </div>
+
+            <div class="card-elevated rounded-xl p-3.5 flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-400/45 text-amber-300 flex items-center justify-center text-base shrink-0">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-amber-400">Pekeliling Dirujuk</p>
+                <p class="text-[13.5px] font-bold text-white leading-snug">
+                  Pematuhan rasmi di bawah PKPUP 2/2002
+                </p>
+              </div>
+            </div>
+
+            <div class="card-elevated rounded-xl p-3.5 flex items-center gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-teal-500/20 border border-teal-400/45 text-teal-300 flex items-center justify-center text-base shrink-0">
+                <i class="fa-solid fa-folder-open"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-teal-400">Skop Dokumen</p>
+                <p class="text-[13.5px] font-bold text-white leading-snug">
+                  Maklumat dan dokumen JTB semasa pembukaan fail
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Container: Complete 2-Column 10-Point Technical Checklist (a - j) -->
+          <div class="card-teal rounded-2xl p-4 flex-1 flex flex-col justify-between min-h-0">
+            <div class="flex items-center justify-between pb-2 mb-2.5 border-b border-teal-400/30 shrink-0">
+              <h3 class="text-sm font-extrabold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-list-check"></i> Perkara Yang Disemak (a – j)
+              </h3>
+              <span class="px-3 py-0.5 rounded bg-teal-500/20 text-teal-300 text-xs font-bold">10 Kriteria Utama</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-x-5 gap-y-2 flex-1 min-h-0">
+              <!-- Left Column: a - e -->
+              <div class="flex flex-col justify-between gap-2 min-h-0">
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-teal-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">a</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Datum dan azimut akui mengikut peraturan.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-teal-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">b</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Cara kerja serta pembukuan betul dan teratur.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-teal-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">c</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Perbezaan sudut mendatar dan jarak dalam had.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-teal-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">d</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Tutupan ukuran betul dan berada dalam hadnya.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-teal-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-teal-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">e</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Jenis tanda sempadan lama dan baru dinyatakan betul.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right Column: f - j -->
+              <div class="flex flex-col justify-between gap-2 min-h-0">
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-amber-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">f</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Tanam pastian mengikut kaedah dan peraturan.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-amber-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">g</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Tanda sempadan atas garisan ditanam betul.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-amber-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">h</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Cerapan matahari dibuat dengan teratur.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-amber-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">i</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Garisan diukur terus saling nampak di lapangan.
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-3 bg-[#0B192C]/85 border border-amber-500/30 rounded-xl px-3.5 py-2 flex-1">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs flex items-center justify-center shrink-0">j</span>
+                  <p class="text-[14px] text-white font-medium leading-snug">
+                    Ukuran garisan sambungan dibuat dengan sempurna.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Garis Panduan Naziran Fail Ukur JTB • PKPUP 2/2002</span>
+          <span class="font-bold text-teal-400">Slaid 13 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 14: KLASIFIKASI KETIDAKPATUHAN — KESALAHAN KECIL & SERIUS     -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="14. Kesalahan Kecil & Kesalahan Serius">
+      <div class="slide-inner">
+        <div class="shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/15 border border-red-400/40 text-red-300 text-xs font-extrabold tracking-wider uppercase mb-1">
+            <i class="fa-solid fa-shield-halved"></i>
+            KLASIFIKASI KETIDAKPATUHAN
+          </div>
+          <h2 class="text-[32px] font-extrabold text-white tracking-tight leading-tight">
+            Kesalahan Kecil &amp; Kesalahan Serius
+          </h2>
+        </div>
+
+        <div class="flex-1 min-h-0 my-2.5 flex flex-col justify-between gap-2.5">
+          <div class="grid grid-cols-12 gap-4 flex-1 items-stretch min-h-0">
+            <!-- Left 4 Cols: 1. KESALAHAN KECIL (a - d) -->
+            <div class="col-span-4 card-gold rounded-2xl p-4 flex flex-col justify-between min-h-0">
+              <div class="flex items-center gap-2 pb-2 mb-2 border-b border-amber-400/30 shrink-0">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400 text-base"></i>
+                <h3 class="text-[15px] font-extrabold text-amber-300">1. KESALAHAN KECIL</h3>
+              </div>
+
+              <div class="flex flex-col justify-between gap-2 flex-1 min-h-0">
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-amber-500/25 rounded-xl px-3 py-2 flex-1">
+                  <span class="w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-[11px] flex items-center justify-center shrink-0">a</span>
+                  <p class="text-[12.5px] text-white leading-snug">Gambarajah dalam buku kerjaluar tidak lengkap atau kurang teratur.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-amber-500/25 rounded-xl px-3 py-2 flex-1">
+                  <span class="w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-[11px] flex items-center justify-center shrink-0">b</span>
+                  <p class="text-[12.5px] text-white leading-snug">Ofset paramuka dan struktur binaan kekal yang melintasi sempadan lot tidak diambil.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-amber-500/25 rounded-xl px-3 py-2 flex-1">
+                  <span class="w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-[11px] flex items-center justify-center shrink-0">c</span>
+                  <p class="text-[12.5px] text-white leading-snug">Nombor bagi tanda sempadan yang bernombor tidak dicatit di dalam Buku Kerjaluar.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-amber-500/25 rounded-xl px-3 py-2 flex-1">
+                  <span class="w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-[11px] flex items-center justify-center shrink-0">d</span>
+                  <p class="text-[12.5px] text-white leading-snug">Jenis tanda sempadan yang dijumpai di lapangan adalah berbeza dengan yang direkodkan dalam Buku Kerjaluar JUBL.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right 8 Cols: 2. KESALAHAN SERIUS (a - j in 2 sub-columns) -->
+            <div class="col-span-8 card-red rounded-2xl p-4 flex flex-col justify-between min-h-0">
+              <div class="flex items-center gap-2 pb-2 mb-2 border-b border-red-400/30 shrink-0">
+                <i class="fa-solid fa-circle-xmark text-red-400 text-base"></i>
+                <h3 class="text-[15px] font-extrabold text-red-300">2. KESALAHAN SERIUS</h3>
+              </div>
+
+              <div class="grid grid-cols-2 gap-x-3.5 gap-y-2 flex-1 min-h-0">
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">a</span>
+                  <p class="text-[12px] text-white leading-tight">Datum dan azimut akui tidak teratur.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">f</span>
+                  <p class="text-[12px] text-white leading-tight">Ukuran tergantung dan tidak lengkap.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">b</span>
+                  <p class="text-[12px] text-white leading-tight">Terdapat perbezaan bearing dan jarak yang ketara.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">g</span>
+                  <p class="text-[12px] text-white leading-tight">Tanda sempadan baru tidak ditanam di lapangan tetapi dalam Buku Kerjaluar JUBL dicatit sebagai telah ditanam.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">c</span>
+                  <p class="text-[12px] text-white leading-tight">Stesen tidak boleh diduduki sedangkan mengikut keterangan dalam Buku Kerjaluar JUBL, stesen tersebut telah diduduki untuk membuat cerapan.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">h</span>
+                  <p class="text-[12px] text-white leading-tight">Tanda sempadan yang teranjak dari kedudukan asal tidak dibuat tanam pastian.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">d</span>
+                  <p class="text-[12px] text-white leading-tight">Garisan tidak dapat dicerap secara terus di lapangan tetapi mengikut keterangan pembukuan oleh JUBL, cerapan telah dibuat secara terus.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">i</span>
+                  <p class="text-[12px] text-white leading-tight">Tanda sempadan yang sepatutnya atas garisan tidak berada atas garisan.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">e</span>
+                  <p class="text-[12px] text-white leading-tight">Terdapat pemalsuan cerapan.</p>
+                </div>
+
+                <div class="flex items-center gap-2.5 bg-[#0B192C]/85 border border-red-500/25 rounded-xl px-3 py-1.5">
+                  <span class="w-5 h-5 rounded-full bg-red-500 text-white font-extrabold text-[11px] flex items-center justify-center shrink-0">j</span>
+                  <p class="text-[12px] text-white leading-tight">Kedudukan stesen tidak membolehkan cerapan matahari dibuat kerana terdapat halangan tetapi mengikut rekod JUBL, cerapan matahari telah dibuat di stesen tersebut.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Disciplinary Banner -->
+          <div class="card-red rounded-xl px-5 py-2 flex items-center justify-center gap-3 border border-red-400/55 shrink-0">
+            <i class="fa-solid fa-gavel text-red-400 text-sm"></i>
+            <p class="text-[13.5px] font-extrabold text-red-200 tracking-wide">
+              TINDAKAN TATATERTIB: Kesalahan berulang dirujuk kepada Lembaga Jurukur Tanah (LJT).
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Kategori Ketidakpatuhan Naziran • Bahagian Kadaster JUPEM</span>
+          <span class="font-bold text-teal-400">Slaid 14 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE 15: CLOSING SLIDE — TERIMA KASIH & SESI SOAL JAWAB            -->
+    <!-- =================================================================== -->
+    <section class="slide" data-title="15. Penutup & Soal Jawab">
+      <div class="slide-inner">
+        <div class="flex items-center justify-between shrink-0 pr-56">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/45 text-amber-300 text-xs font-extrabold tracking-widest uppercase">
+            <i class="fa-solid fa-certificate text-amber-400"></i>
+            PEMATUHAN PKPUP 6/2009 &amp; PKPUP 1/2026
+          </div>
+          <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Hotel Granada • 25 November 2026</span>
+        </div>
+
+        <div class="my-auto text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-teal-500 to-emerald-400 text-slate-950 flex items-center justify-center text-5xl mb-7 shadow-xl shadow-teal-500/30">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+
+          <h1 class="text-[52px] font-black text-white tracking-tight leading-tight mb-5">
+            Terima Kasih &amp; Sesi Soal Jawab
+          </h1>
+
+          <p class="text-[19px] text-slate-300 font-semibold leading-relaxed mb-8">
+            AIMAN SYAHMI BIN MOHD ATRASH <span class="text-amber-400 mx-2.5">•</span> Bengkel Perkongsian Amalan Terbaik JUPEM <span class="text-amber-400 mx-2.5">•</span> Hotel Granada, 25 November 2026
+          </p>
+
+          <div class="w-32 h-1.5 bg-gradient-to-r from-teal-400 via-amber-400 to-teal-400 rounded-full"></div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-700/70 pt-2.5 shrink-0">
+          <span>Jabatan Ukur dan Pemetaan Malaysia (JUPEM)</span>
+          <span class="font-bold text-teal-400">Slaid 15 / 15</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- COMPACT FLOATING BOTTOM NAVIGATION BAR                              -->
+    <!-- =================================================================== -->
+    <div id="nav-controls" class="floating-ui fixed bottom-3 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#132743]/95 border border-slate-600/70 backdrop-blur-md shadow-2xl">
+      <button id="btn-prev" title="Slaid Sebelumnya (Anak Panah Kiri)" class="w-7 h-7 rounded-full bg-[#1A3356] hover:bg-teal-500 text-slate-200 hover:text-slate-950 flex items-center justify-center transition-colors cursor-pointer">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+      </button>
+
+      <div id="slide-dots" class="flex items-center gap-1.5 px-1">
+        <!-- Slide indicator dots populated dynamically via JS -->
+      </div>
+
+      <div class="px-2 text-xs font-extrabold tracking-wider text-white min-w-[58px] text-center" id="slide-counter">
+        1 / 15
+      </div>
+
+      <button id="btn-next" title="Slaid Seterusnya (Anak Panah Kanan / Space)" class="w-7 h-7 rounded-full bg-[#1A3356] hover:bg-teal-500 text-slate-200 hover:text-slate-950 flex items-center justify-center transition-colors cursor-pointer">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- SLIDE OVERVIEW GRID MODAL                                           -->
+    <!-- =================================================================== -->
+    <div id="overview-modal" class="fixed inset-0 z-50 bg-[#0B192C]/95 backdrop-blur-md hidden flex-col p-6 sm:p-8 overflow-y-auto">
+      <div class="max-w-6xl w-full mx-auto">
+        <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+          <div>
+            <p class="text-xs font-extrabold uppercase tracking-wider text-teal-400">Navigasi Pantas</p>
+            <h3 class="text-2xl font-extrabold text-white">Semua Slaid Pembentangan (15 Slaid)</h3>
+          </div>
+          <button id="btn-close-overview" class="w-10 h-10 rounded-full bg-[#132743] hover:bg-red-500 text-white flex items-center justify-center transition-colors cursor-pointer">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <div id="overview-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const stage = document.getElementById('deck-stage');
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const slideInners = Array.from(document.querySelectorAll('.slide-inner'));
+      const counterEl = document.getElementById('slide-counter');
+      const dotsEl = document.getElementById('slide-dots');
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const btnOverview = document.getElementById('btn-overview');
+      const btnPrint = document.getElementById('btn-print');
+      const btnFullscreen = document.getElementById('btn-fullscreen');
+      const iconFullscreen = document.getElementById('icon-fullscreen');
+      const btnZoomOut = document.getElementById('btn-zoom-out');
+      const btnZoomReset = document.getElementById('btn-zoom-reset');
+      const btnZoomIn = document.getElementById('btn-zoom-in');
+      const overviewModal = document.getElementById('overview-modal');
+      const overviewGrid = document.getElementById('overview-grid');
+      const btnCloseOverview = document.getElementById('btn-close-overview');
+      const floatingEls = Array.from(document.querySelectorAll('.floating-ui'));
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+      let userZoomMultiplier = 1.0;
+      let idleTimer = null;
+
+      // Proportional Viewport Scaling Engine (1280x720 Virtual Canvas -> Any Monitor/TV/Projector)
+      function updateSlideScale() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const baseScale = Math.min(vw / 1280, vh / 720);
+        const finalScale = baseScale * userZoomMultiplier;
+
+        slideInners.forEach((inner) => {
+          inner.style.transform = `scale(${finalScale})`;
+        });
+      }
+
+      function updateZoomUI() {
+        btnZoomReset.textContent = `${Math.round(userZoomMultiplier * 100)}%`;
+        updateSlideScale();
+      }
+
+      btnZoomOut.addEventListener('click', () => {
+        userZoomMultiplier = Math.max(0.75, +(userZoomMultiplier - 0.1).toFixed(2));
+        updateZoomUI();
+      });
+
+      btnZoomReset.addEventListener('click', () => {
+        userZoomMultiplier = 1.0;
+        updateZoomUI();
+      });
+
+      btnZoomIn.addEventListener('click', () => {
+        userZoomMultiplier = Math.min(1.4, +(userZoomMultiplier + 0.1).toFixed(2));
+        updateZoomUI();
+      });
+
+      window.addEventListener('resize', updateSlideScale);
+      if (typeof ResizeObserver !== 'undefined') {
+        const ro = new ResizeObserver(updateSlideScale);
+        ro.observe(document.documentElement);
+      }
+
+      function resetIdleTimer() {
+        floatingEls.forEach((el) => el.classList.remove('idle'));
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(() => {
+          floatingEls.forEach((el) => el.classList.add('idle'));
+        }, 3000);
+      }
+
+      function buildDots() {
+        dotsEl.innerHTML = '';
+        slides.forEach((slide, idx) => {
+          const dot = document.createElement('button');
+          dot.title = slide.getAttribute('data-title') || `Slaid ${idx + 1}`;
+          dot.className = `h-2 rounded-full transition-all cursor-pointer ${
+            idx === currentIndex
+              ? 'w-5 bg-teal-400'
+              : 'w-2 bg-slate-600 hover:bg-amber-400'
+          }`;
+          dot.addEventListener('click', () => goToSlide(idx));
+          dotsEl.appendChild(dot);
+        });
+      }
+
+      function goToSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= totalSlides) index = totalSlides - 1;
+
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle('active', idx === index);
+        });
+
+        currentIndex = index;
+        counterEl.textContent = `${currentIndex + 1} / ${totalSlides}`;
+        btnPrev.disabled = currentIndex === 0;
+        btnPrev.style.opacity = currentIndex === 0 ? '0.4' : '1';
+        btnNext.disabled = currentIndex === totalSlides - 1;
+        btnNext.style.opacity = currentIndex === totalSlides - 1 ? '0.4' : '1';
+        buildDots();
+        updateSlideScale();
+        resetIdleTimer();
+      }
+
+      function buildOverviewGrid() {
+        overviewGrid.innerHTML = '';
+        slides.forEach((slide, idx) => {
+          const title = slide.getAttribute('data-title') || `Slaid ${idx + 1}`;
+          const card = document.createElement('button');
+          card.className = `text-left p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between h-28 ${
+            idx === currentIndex
+              ? 'bg-teal-500/20 border-teal-400 text-white shadow-lg shadow-teal-500/15'
+              : 'bg-[#132743] border-slate-700 hover:border-amber-400/60 text-slate-300'
+          }`;
+          card.innerHTML = `
+            <div class="flex items-center justify-between w-full">
+              <span class="px-2.5 py-0.5 rounded bg-[#0B192C] text-teal-400 text-xs font-extrabold">Slaid ${idx + 1}</span>
+              ${idx === currentIndex ? '<span class="text-[10px] font-extrabold uppercase text-amber-400">Aktif</span>' : ''}
+            </div>
+            <p class="text-sm font-bold text-white line-clamp-2 mt-2">${title}</p>
+          `;
+          card.addEventListener('click', () => {
+            goToSlide(idx);
+            overviewModal.classList.add('hidden');
+            overviewModal.classList.remove('flex');
+          });
+          overviewGrid.appendChild(card);
+        });
+      }
+
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+
+      document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+          iconFullscreen.classList.remove('fa-expand');
+          iconFullscreen.classList.add('fa-compress');
+        } else {
+          iconFullscreen.classList.remove('fa-compress');
+          iconFullscreen.classList.add('fa-expand');
+        }
+        updateSlideScale();
+      });
+
+      btnPrev.addEventListener('click', () => goToSlide(currentIndex - 1));
+      btnNext.addEventListener('click', () => goToSlide(currentIndex + 1));
+      btnFullscreen.addEventListener('click', toggleFullscreen);
+
+      btnOverview.addEventListener('click', () => {
+        buildOverviewGrid();
+        overviewModal.classList.remove('hidden');
+        overviewModal.classList.add('flex');
+      });
+
+      btnCloseOverview.addEventListener('click', () => {
+        overviewModal.classList.add('hidden');
+        overviewModal.classList.remove('flex');
+      });
+
+      btnPrint.addEventListener('click', () => {
+        window.print();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        resetIdleTimer();
+        if (!overviewModal.classList.contains('hidden')) {
+          if (e.key === 'Escape') {
+            overviewModal.classList.add('hidden');
+            overviewModal.classList.remove('flex');
+          }
+          return;
+        }
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+          e.preventDefault();
+          goToSlide(currentIndex + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          goToSlide(currentIndex - 1);
+        } else if (e.key === 'Home') {
+          goToSlide(0);
+        } else if (e.key === 'End') {
+          goToSlide(totalSlides - 1);
+        }
+      });
+
+      let touchStartX = 0;
+      stage.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        resetIdleTimer();
+      }, { passive: true });
+
+      stage.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 45) {
+          if (diff > 0) goToSlide(currentIndex + 1);
+          else goToSlide(currentIndex - 1);
+        }
+      }, { passive: true });
+
+      ['mousemove', 'mousedown', 'click'].forEach((evt) => {
+        document.addEventListener(evt, resetIdleTimer, { passive: true });
+      });
+
+      window.addEventListener('load', () => {
+        updateSlideScale();
+        goToSlide(0);
+        resetIdleTimer();
+      });
+
+      updateSlideScale();
+      goToSlide(0);
+      resetIdleTimer();
+    })();
+  </script>
+</body>
+</html>
